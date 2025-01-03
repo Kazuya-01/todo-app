@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, FlatList, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet } from "react-native";
+import { Link } from "expo-router";
 
 interface Todo {
   id: string;
@@ -70,6 +71,9 @@ const DaftarTugas = () => {
         keyExtractor={(item) => item.id}
         renderItem={renderTodo}
       />
+      <Link href="/pages/about/page" style={styles.link}>
+        <Text style={styles.linkText}>Tentang Aplikasi</Text>
+      </Link>
     </View>
   );
 };
@@ -86,11 +90,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   inputContainer: {
-    flexDirection: "row", 
+    flexDirection: "row",
     marginBottom: 10,
   },
   input: {
-    flex: 1, 
+    flex: 1,
     height: 40,
     borderWidth: 1,
     borderColor: "#ddd",
@@ -132,6 +136,13 @@ const styles = StyleSheet.create({
   deleteButton: {
     color: "#dc3545",
     fontSize: 16,
+  },
+  link: {
+    marginTop: 20,
+  },
+  linkText: {
+    fontSize: 18,
+    color: "#007bff",
   },
 });
 

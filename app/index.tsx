@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
-import { Link } from "expo-router"; 
+import { View, Text, StyleSheet } from "react-native";
+import { Link } from "expo-router";
 
 const App = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Aplikasi Todo</Text>
-      <Link href="/daftar-tugas" style={styles.link}>
-        <Text style={styles.linkText}>Daftar Tugas</Text>
+      <Link href="/pages/daftar-tugas" style={styles.link}>
+        <Text style={styles.linkText}>Ke Daftar Tugas</Text>
       </Link>
-      <Link href="/about" style={styles.link}>
+      <Link href="/pages/about/page" style={styles.link}>
         <Text style={styles.linkText}>Tentang Aplikasi</Text>
       </Link>
     </View>

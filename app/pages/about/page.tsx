@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const AboutApps = () => {
+const About = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tentang Aplikasi</Text>
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AboutApps;
+export default About;
